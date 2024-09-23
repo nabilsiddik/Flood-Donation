@@ -54,7 +54,7 @@ function donationCalculation(btnElement){
     }else if(currentInputAmount > totalInitialAmount){
         alert("Insufficient Balance")
     }else if(isNaN(currentInputAmount)){
-        alert("Amount Must be a Number. Please enter again")
+        alert("Amount Can not be empty and Must be a Number. Please enter again")
     }else{
         previouslyDonatedAmountElement.innerText = previouslyDonatedAmount + currentInputAmount
 
