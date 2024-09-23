@@ -19,7 +19,7 @@
         <header id="header" class="fixed top-0 w-full z-10">
             <!-- Header Top -->
             <div class="header_top bg-[#F9F7F3] py-10">
-                <div class="container mx-auto flex items-center justify-between max-w-[1200px]">
+                <div class="container mx-auto flex flex-col md:flex-row gap-8 md:gap-0 items-center justify-between lg:max-w-[1200px] max-w-[90%]">
                     <div class="header_left">
                         <a href="index.html">
                             <button class="btn btn-md bg-primaryColor font-bold px-8 text-lg">Home</button>
@@ -50,8 +50,8 @@
 
 
         <!-- Start FAQ Section -->
-         <section id="faq" class="mt-[170px]">
-            <div class="container mx-auto max-w-[1200px]">
+         <section id="faq" class="md:mt-[170px] mt-[320px]">
+            <div class="container mx-auto lg:max-w-[1200px] max-w-[90%]">
                 <h1 class="font-bold text-4xl mb-10">
                     Important FAQ 
                     <i class="fa-solid fa-circle-question"></i>
@@ -60,21 +60,21 @@
                 <div class="join join-vertical w-full">
                     <div class="collapse collapse-arrow join-item border-base-300 border">
                       <input type="radio" name="my-accordion-4" checked="checked" />
-                      <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                      <div class="collapse-title md:text-xl text-lg font-medium">What is the Document Object Model (DOM)?</div>
                       <div class="collapse-content">
                         <p>The Document Object Model (DOM) is a programming interface for web documents, representing the structure of HTML or XML as a tree of objects that can be manipulated.</p>
                       </div>
                     </div>
                     <div class="collapse collapse-arrow join-item border-base-300 border">
                       <input type="radio" name="my-accordion-4" />
-                      <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                      <div class="collapse-title md:text-xl text-lg font-medium">How do you select an element from the DOM?</div>
                       <div class="collapse-content">
                         <p>You can select DOM elements using methods like document.getElementById(), document.querySelector(), or document.getElementsByClassName().</p>
                       </div>
                     </div>
                     <div class="collapse collapse-arrow join-item border-base-300 border">
                       <input type="radio" name="my-accordion-4" />
-                      <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                      <div class="collapse-title md:text-xl text-lg font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
                       <div class="collapse-content">
                         <p>Event delegation is a technique where a single event listener is attached to a parent element to handle events for all its children, improving performance.</p>
                       </div>
@@ -82,7 +82,7 @@
 
                     <div class="collapse collapse-arrow join-item border-base-300 border">
                         <input type="radio" name="my-accordion-4" />
-                        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                        <div class="collapse-title md:text-xl text-lg font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                         <div class="collapse-content">
                           <p>You can change an element’s attributes using element.setAttribute() and styles using element.style.property.</p>
                         </div>
