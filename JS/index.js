@@ -33,20 +33,53 @@ historyBtn.addEventListener('click', function(){
 
 // Donation Calculation
 function donationCalculation(btnElement){
+
+    const date = new Date()
+
     const totalInitialAmountElement = document.getElementById('total_initial_amount')
     const totalInitialAmount = parseFloat(totalInitialAmountElement.innerText)
 
     const parentCard = btnElement.closest('.card')
+
+    const donationTitle = parentCard.querySelector('.card-title').innerText
+
     const previouslyDonatedAmountElement = parentCard.querySelector('.amount')
     const previouslyDonatedAmount = parseFloat(previouslyDonatedAmountElement.innerText)
 
     const currentInputElement = parentCard.querySelector('input[type="text"]')
     const currentInputAmount = parseFloat(currentInputElement.value)
 
-    previouslyDonatedAmountElement.innerText = previouslyDonatedAmount + currentInputAmount
+    if(currentInputAmount <= 0){
+        alert("Amount can not be Zero or Negative. Please enter again.")
+    }else if(currentInputAmount > totalInitialAmount){
+        alert("Insufficient Balance")
+    }else if(isNaN(currentInputAmount)){
+        alert("Amount Must be a Number. Please enter again")
+    }else{
+        previouslyDonatedAmountElement.innerText = previouslyDonatedAmount + currentInputAmount
 
-    totalInitialAmountElement.innerText = totalInitialAmount - currentInputAmount
+        totalInitialAmountElement.innerText = totalInitialAmount - currentInputAmount
+
+        // Creating History
+        createHistory(currentInputAmount, donationTitle, date)
+    }
 
     currentInputElement.value = ''
+
 }
 
+
+
+
+// Creating History
+function createHistory(donationAmount, donationName, date){
+    const historyContainer = document.getElementById('history_container')
+    const cards = historyContainer.querySelector('.cards')
+
+    cards.innerHTML += `
+        <div class="card border py-5 px-10 shadow-lg mb-10">
+            <h2 class="title font-bold text-xl mb-2">${donationAmount} Taka is Donated for ${donationName}</h2>
+            <p class="date">Date : ${date}</p>
+        </div>
+    `
+}
