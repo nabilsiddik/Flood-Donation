@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/index.css">
+    <title>Home Page</title>
+</head>
+<body>
+    
+    <!-- Start Header Section -->
+     <header id="header">
+        <!-- Header Top -->
+        <div class="header_top bg-[#F9F7F3] py-10 mb-20">
+            <div class="container mx-auto flex items-center justify-between max-w-[1200px]">
+                <div class="header_left">
+                    <button class="btn btn-md bg-primaryColor font-bold px-8 text-lg">Blog</button>
+                </div>
+    
+                <div class="header_middle">
+                    <div class="logo flex items-center gap-3 font-bold text-lg">
+                        <img src="assets/logo.png" alt="logo">
+                        <h3>Donate Bangladesh</h3>
+                    </div>
+                </div>
+    
+                <div class="header_right">
+                    <div class="initial_balance flex items-center gap-3">
+                        <span class="icon">
+                            <img src="assets/coin.png" alt="">
+                        </span>
+                        <span class="amount font-bold">5500 BDT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Tab Buttons -->
+        <div class="header_tab_buttons">
+            <div class="container mx-auto flex justify-center">
+                <div class="buttons flex items-center gap-10">
+                    <button id="donation_btn" class="btn btn-md font-bold px-8 text-lg">Donation</button>
+                    <button id="history_btn" class="btn btn-md font-bold px-8 text-lg">History</button>
+                </div>
+            </div>
+        </div>
+     </header>
+    <!-- End Header Section -->
+
+    <!-- Start Main Section -->
+     <main id="main" class="mt-20">
+        <div class="container mx-auto max-w-[1200px]">
+            <!-- Donation Container -->
+            <div class="donation_contianer hidden">
+                <div class="cards">
+                    <!-- card 1 -->
+                    <div class="card bg-base-100 shadow-xl border-2 p-5 mb-10">
+                        <div class="card_continer flex items-center gap-5">
+                            <figure class="w-[50%]">
+                                <img
+                                  src="assets/noakhali.png"
+                                  alt="Shoes" />
+                              </figure>
+
+                              <div class="card-body w-[50%]">
+                                    <div class="donation_amount bg-[rgba(17,17,17,0.05)] inline-flex items-center gap-2 py-2 px-5 rounded-md" style="width: fit-content;">
+                                        <span class="icon">
+                                            <img src="assets/coin.png" alt="">
+                                        </span>
+                                        <span class="amount">0 BDT</span>
+                                    </div>
+                                    <h2 class="card-title font-bold text-2xl mt-3">Donate for Flood at Noakhali, Bangladesh</h2>
+                                    <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+                                    <input type="text" class="input input-bordered w-full max-w-xs my-3" placeholder="Write Donation Amount">
+
+                                    <div class="card-actions justify-end">
+                                    <button class="btn bg-primaryColor text-lg font-bold btn-block">Donate Now</button>
+                                    </div>
+                              </div>
+                        </div>
+                      </div>
+
+
+                      <!-- card 2 -->
+                    <div class="card bg-base-100 shadow-xl border-2 p-5 mb-10">
+                        <div class="card_continer flex items-center gap-5">
+                            <figure class="w-[50%]">
+                                <img
+                                  src="assets/feni.png"
+                                  alt="feni flood" />
+                              </figure>
+
+                              <div class="card-body w-[50%]">
+                                    <div class="donation_amount bg-[rgba(17,17,17,0.05)] inline-flex items-center gap-2 py-2 px-5 rounded-md" style="width: fit-content;">
+                                        <span class="icon">
+                                            <img src="assets/coin.png" alt="">
+                                        </span>
+                                        <span class="amount">0 BDT</span>
+                                    </div>
+                                    <h2 class="card-title font-bold text-2xl mt-3">Donate for Flood at Noakhali, Bangladesh</h2>
+                                    <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+                                    <input type="text" class="input input-bordered w-full max-w-xs my-3" placeholder="Write Donation Amount">
+
+                                    <div class="card-actions justify-end">
+                                    <button class="btn bg-primaryColor text-lg font-bold btn-block">Donate Now</button>
+                                    </div>
+                              </div>
+                        </div>
+                      </div>
+
+
+                      <!-- card 3 -->
+                    <div class="card bg-base-100 shadow-xl border-2 p-5">
+                        <div class="card_continer flex items-center gap-5">
+                            <figure class="w-[50%]">
+                                <img
+                                  src="assets/quota-protest.png"
+                                  alt="flood" />
+                              </figure>
+
+                              <div class="card-body w-[50%]">
+                                    <div class="donation_amount bg-[rgba(17,17,17,0.05)] inline-flex items-center gap-2 py-2 px-5 rounded-md" style="width: fit-content;">
+                                        <span class="icon">
+                                            <img src="assets/coin.png" alt="">
+                                        </span>
+                                        <span class="amount">0 BDT</span>
+                                    </div>
+                                    <h2 class="card-title font-bold text-2xl mt-3">Donate for Flood at Noakhali, Bangladesh</h2>
+                                    <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+
+                                    <input type="text" class="input input-bordered w-full max-w-xs my-3" placeholder="Write Donation Amount">
+
+                                    <div class="card-actions justify-end">
+                                    <button class="btn bg-primaryColor text-lg font-bold btn-block">Donate Now</button>
+                                    </div>
+                              </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+            <!-- History Contianer -->
+             <div class="history_container">
+                <div class="cards">
+                    <div class="card border py-5 px-10 shadow-lg mb-10">
+                        <h2 class="title font-bold text-xl mb-2">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+                        <p class="date">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+                    </div>
+
+                    <div class="card border py-5 px-10 shadow-lg mb-10">
+                        <h2 class="title font-bold text-xl mb-2">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+                        <p class="date">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+                    </div>
+
+                    <div class="card border py-5 px-10 shadow-lg mb-10">
+                        <h2 class="title font-bold text-xl mb-2">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+                        <p class="date">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+                    </div>
+                </div>
+             </div>
+        </div>
+     </main>
+    <!-- End Main Section -->
+
+    <!-- Start Footer Section -->
+     <footer id="footer" class="py-14 bg-[#F9F7F3]"></footer>
+    <!-- End Footer Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primaryColor: '#B4F461',
+              },
+              fontFamily: {
+                primaryFont: ["Lexend", "sans-serif"]
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
