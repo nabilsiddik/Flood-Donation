@@ -30,3 +30,23 @@ historyBtn.addEventListener('click', function(){
 })
 
 
+
+// Donation Calculation
+function donationCalculation(btnElement){
+    const totalInitialAmountElement = document.getElementById('total_initial_amount')
+    const totalInitialAmount = parseFloat(totalInitialAmountElement.innerText)
+
+    const parentCard = btnElement.closest('.card')
+    const previouslyDonatedAmountElement = parentCard.querySelector('.amount')
+    const previouslyDonatedAmount = parseFloat(previouslyDonatedAmountElement.innerText)
+
+    const currentInputElement = parentCard.querySelector('input[type="text"]')
+    const currentInputAmount = parseFloat(currentInputElement.value)
+
+    previouslyDonatedAmountElement.innerText = previouslyDonatedAmount + currentInputAmount
+
+    totalInitialAmountElement.innerText = totalInitialAmount - currentInputAmount
+
+    currentInputElement.value = ''
+}
+
