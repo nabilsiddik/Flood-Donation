@@ -60,6 +60,25 @@ function donationCalculation(btnElement){
 
         totalInitialAmountElement.innerText = totalInitialAmount - currentInputAmount
 
+        // Open Modal
+        const modalContainer = document.getElementById('modal_container')
+        modalContainer.innerHTML = `
+                <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+                <div class="modal" role="dialog">
+                <div class="modal-box text-center">
+                    <h3 class="text-4xl font-bold">Thank You!</h3>
+                    <img class="mx-auto mt-4" src="assets/coin.png" alt="">
+                    <p class="py-4">Your donation of BDT <span class="font-bold">${currentInputAmount}</span> for <span class="font-bold">${donationTitle}</span> is successful</p>
+                    <div class="modal-action">
+                    <label for="my_modal_6" class="btn w-full bg-primaryColor">Close!</label>
+                    </div>
+                </div>
+                </div>
+        `
+        
+        const modalCheckbox = document.getElementById('my_modal_6')
+        modalCheckbox.checked = true
+
         // Creating History
         createHistory(currentInputAmount, donationTitle, date)
     }
